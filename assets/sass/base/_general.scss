@@ -1,0 +1,54 @@
+// ---------------------------------------------------------===
+// General styles
+// ---------------------------------------------------------===
+
+// general resets
+html {
+    font-size: $font-size-html;
+}
+
+body {
+    min-width: 320px;
+}
+
+a {
+    @include animate(color);
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+input [type="email"], 
+input [type="tel"], 
+input[type="search"], 
+input[type="text"], 
+input[type="password"], 
+input[type="file"], 
+input[type="submit"], 
+textarea {
+    -webkit-appearance:none;
+}
+
+// hide tel links on desktop
+@media only screen and (min-width:1025px) {
+    a[href^=tel],a[href^=skype], a[href^=sms] {
+        
+        cursor:default;
+        pointer-events:none;
+    }
+}
+
+// bg cover
+[style*="background-image"] {
+    background-position: 50% 50%;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+#wrapper {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+}

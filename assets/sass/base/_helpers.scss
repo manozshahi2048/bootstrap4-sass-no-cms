@@ -1,0 +1,84 @@
+// ---------------------------------------------------------===
+// Helpers
+// ---------------------------------------------------------===
+
+// @extend %listreset [Demo]
+
+// list reset
+%listreset {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+// clearfix
+%clearfix {
+    &:after {
+        content: '';
+        display: block;
+        clear: both;
+    }
+}
+
+.clearfix {
+    @extend %clearfix;
+}
+
+
+// transition
+%transition {
+    transition: all 0.3s ease-in-out;
+}
+
+// justify nav
+%justify {
+    text-align: justify;
+    font-size: 1px;
+    line-height: 0px;
+
+    > * {
+        display: inline-block;
+        vertical-align: top;
+        text-align: left;
+        font-size: $font-size-base;
+        line-height: $line-height-base;
+    }
+
+    &:after {
+        content: '';
+        width: 100%;
+        display: inline-block;
+        vertical-align: top;
+    }
+}
+
+%sprite {
+    background-image: url('#{$image-path}/sprite.png');
+    background-repeat: no-repeat;
+}
+
+.ellipsis {
+    white-space: nowrap; /* 1 */
+    text-overflow: ellipsis; /* 2 */
+    overflow: hidden;
+}
+
+// skewed bg
+%skewed-bg {
+    &:before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: -500px;
+        right: -500px;
+        bottom: 0;
+        z-index: -1;
+        transform: rotate(-3.3deg);
+    }
+}
+
+// Reset image
+%img-reset {
+    display: block;
+    width: 100%;
+}

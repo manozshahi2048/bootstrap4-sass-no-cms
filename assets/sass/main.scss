@@ -1,0 +1,23 @@
+// ---------------------------------------------------------===
+// Main file
+// ---------------------------------------------------------===
+
+// media-breakpoint-up(lg)        = (min-width)
+// media-breakpoint-down(xl)      = (max-width)
+// media-breakpoint-between(lg,xl)   = (min-width, max-width)
+
+@import url('https://fonts.googleapis.com/css?family=Lato|Oswald:300,400,700');
+@import 'base/mixins';
+@import 'bootstrap-override';
+@import 'base/variables';
+@import 'base/helpers';
+@import 'vendors/fonts';
+
+@import 'node_modules/bootstrap/scss/bootstrap';
+
+@import 'base/general';
+
+@import 'layouts/header';
+@import 'layouts/common';
+@import 'layouts/footer';
+
